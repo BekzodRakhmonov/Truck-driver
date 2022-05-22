@@ -22,6 +22,7 @@ public class LoginActivity extends AppCompatActivity {
         setContentView(binding.getRoot());
         login();
     }
+//    bu test
 
     private void login() {
        // loading(true);
