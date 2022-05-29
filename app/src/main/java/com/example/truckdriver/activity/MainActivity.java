@@ -5,6 +5,7 @@ import android.view.View;
 import android.view.Menu;
 
 import com.example.truckdriver.R;
+import com.example.truckdriver.database.MyDB;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
@@ -17,8 +18,11 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.truckdriver.databinding.ActivityMainBinding;
 
-public class MainActivity extends AppCompatActivity {
+import java.io.IOException;
+import java.io.InputStream;
 
+public class MainActivity extends AppCompatActivity {
+    private MyDB myDB;
     private AppBarConfiguration mAppBarConfiguration;
     private ActivityMainBinding binding;
 
@@ -28,7 +32,14 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
+        myDB = new MyDB(binding.getRoot().getContext());
+        try {
+            InputStream open = getAssets().open("cust.sql");
 
+
+        } catch (IOException e) {
+            e.printStackTrace();
+        }
         setSupportActionBar(binding.appBarMain.toolbar);
 
 
