@@ -166,7 +166,7 @@ public class MyDB extends SQLiteOpenHelper {
         // content values to our table.
         db.insert(DRIVER_TABLE, null, values);
         // at last we are closing our
-        // database after adding database.
+
         //db.close();
     }
 
