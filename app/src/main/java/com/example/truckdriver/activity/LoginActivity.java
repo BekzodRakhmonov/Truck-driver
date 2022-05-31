@@ -8,10 +8,11 @@ import android.view.View;
 import android.widget.Toast;
 
 import com.example.truckdriver.R;
+import com.example.truckdriver.database.MyDB;
 import com.example.truckdriver.databinding.ActivityLoginBinding;
 
 public class LoginActivity extends AppCompatActivity {
-
+    private MyDB myDB;
     private ActivityLoginBinding binding;
 
     @Override
@@ -30,6 +31,8 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                myDB = new MyDB(binding.getRoot().getContext());
+                myDB.addNewLicense("11-01-2022","11-01-2032",74857);
                 finish();
             }
         });

@@ -33,13 +33,7 @@ public class MainActivity extends AppCompatActivity {
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
         myDB = new MyDB(binding.getRoot().getContext());
-        try {
-            InputStream open = getAssets().open("cust.sql");
-
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
+        myDB.addNewLicense("11-01-2022","11-01-2032",74857);
         setSupportActionBar(binding.appBarMain.toolbar);
 
 
