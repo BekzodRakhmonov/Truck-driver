@@ -19,21 +19,36 @@ public class LoginActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         binding = ActivityLoginBinding.inflate(getLayoutInflater());
-
         setContentView(binding.getRoot());
+        myDB = new MyDB(binding.getRoot().getContext());
         login();
     }
 //    bu test
 
     private void login() {
-       // loading(true);
+        // loading(true);
         binding.buttonSignIn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
+                loading(true);
                 startActivity(new Intent(getApplicationContext(), MainActivity.class));
-                myDB = new MyDB(binding.getRoot().getContext());
-                myDB.addNewLicense("11-01-2022","11-01-2032",74857);
                 finish();
+                String username = binding.inputEmail.getText().toString().trim();
+                String name = binding.inputPassword.getText().toString().trim();
+                if (username.isEmpty() && name.isEmpty()) {
+                    showToast("Введите данные полностью.");
+                    loading(false);
+                } else {
+                    if (myDB.checkUserNamePassword(username, name)) {
+                        loading(false);
+                        startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                        finish();
+                    } else {
+                        loading(false);
+                        showToast("Данный пользователь не зарегистрирован");
+                    }
+
+                }
             }
         });
     }

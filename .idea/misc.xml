@@ -3,6 +3,13 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/drawable/ic_baseline_refresh_24.xml" value="0.123" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/layout/activity_login.xml" value="0.22447916666666667" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/layout/app_bar_main.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/layout/content_main.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/layout/fragment_home.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/menu/activity_main_drawer.xml" value="0.20104166666666667" />
+        <entry key="..\:/Users/akbar/AndroidStudioProjects/Truck-driver/app/src/main/res/menu/main.xml" value="0.20104166666666667" />
         <entry key="..\:/Users/behzo/AndroidStudioProjects/Truckdriver/app/src/main/res/drawable/background_input.xml" value="0.147" />
         <entry key="..\:/Users/behzo/AndroidStudioProjects/Truckdriver/app/src/main/res/layout/activity_login.xml" value="0.33" />
         <entry key="..\:/Users/behzo/AndroidStudioProjects/Truckdriver/app/src/main/res/layout/activity_main.xml" value="0.2" />

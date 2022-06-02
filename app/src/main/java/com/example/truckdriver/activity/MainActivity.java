@@ -9,6 +9,7 @@ import com.example.truckdriver.database.MyDB;
 import com.google.android.material.snackbar.Snackbar;
 import com.google.android.material.navigation.NavigationView;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.navigation.NavController;
 import androidx.navigation.Navigation;
 import androidx.navigation.ui.AppBarConfiguration;
@@ -32,8 +33,6 @@ public class MainActivity extends AppCompatActivity {
 
         binding = ActivityMainBinding.inflate(getLayoutInflater());
         setContentView(binding.getRoot());
-        myDB = new MyDB(binding.getRoot().getContext());
-        myDB.addNewLicense("11-01-2022","11-01-2032",74857);
         setSupportActionBar(binding.appBarMain.toolbar);
 
 
@@ -50,12 +49,12 @@ public class MainActivity extends AppCompatActivity {
         NavigationUI.setupWithNavController(navigationView, navController);
     }
 
-  /*  @Override
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.main, menu);
         return true;
-    }*/
+    }
 
     @Override
     public boolean onSupportNavigateUp() {
